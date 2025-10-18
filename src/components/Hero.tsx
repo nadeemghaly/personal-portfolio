@@ -1,6 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 import { heroData, socialLinks } from '../data';
-import { SocialLinks } from './ui';
+import { SectionWrapper, SocialLinks } from './ui';
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -8,7 +8,11 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
+    <SectionWrapper
+    id="hero"
+    className="bg-gradient-to-br from-sky-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300"
+  >
+    <section className="hero-section">
       <div className="hero-container">
         <div className="mb-6">
           <h1 className="hero-name">
@@ -41,5 +45,6 @@ export function Hero() {
         </button>
       </div>
     </section>
+    </SectionWrapper>
   );
 }

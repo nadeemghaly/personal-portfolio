@@ -13,7 +13,7 @@ interface SectionWrapperProps {
 
 export function SectionWrapper({
   id,
-  className = "py-32 px-6 bg-white dark:bg-gray-900 transition-colors duration-300",
+  className ,
   children,
   title,
   description,
@@ -23,7 +23,7 @@ export function SectionWrapper({
   const { ref, isInView } = useInView();
 
   return (
-    <section id={id} className={className}>
+    <section id={id} className={`min-h-screen ${className}`}>
       <div ref={ref} className="max-w-6xl mx-auto">
         {title && (
           <h2 className={`${titleClassName} transition-all duration-700 ${

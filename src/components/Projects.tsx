@@ -24,7 +24,7 @@ export function Projects() {
               key={index}
               className="group bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl border border-gray-200 dark:border-gray-700"
               gradient={project.gradient}
-              delay={200 + index * 100}
+              delay={(index-1) * 50}
               isInView={isInView}
             >
               <div className="p-6">

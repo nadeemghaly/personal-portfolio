@@ -1,5 +1,9 @@
-/* Hero Section Styles */
+
 @layer components {
+
+  .hero-section {
+    @apply min-h-screen flex items-center justify-center;
+  }
 
   .hero-container {
     @apply max-w-4xl mx-auto text-center animate-fade-in;
