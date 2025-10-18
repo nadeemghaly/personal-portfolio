@@ -1,11 +1,12 @@
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useInView } from '../hooks/useInView';
-import { projects } from '../data';
-import { SectionWrapper, Card, Button } from './ui';
+import { projectsData } from '../data';
+import { SectionWrapper, Button } from './ui';
+import '../styles/components/projects.css';
 
 // Show only the first 3 projects as featured
-const featuredProjects = projects.slice(0, 3);
+const featuredProjects = projectsData.slice(0, 3);
 
 export function Projects() {
   const { ref, isInView } = useInView();
@@ -13,49 +14,50 @@ export function Projects() {
   return (
     <SectionWrapper
       id="projects"
-      className="py-32 px-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+      className="projects-section"
       title="Featured Projects"
       description="A selection of projects that showcase my skills and passion for development"
     >
-      <div className="max-w-7xl mx-auto">
-        <div ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="projects-container">
+        <div ref={ref} className="projects-grid">
           {featuredProjects.map((project, index) => (
-            <Card
+            <div
               key={index}
-              className="group bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl border border-gray-200 dark:border-gray-700"
-              gradient={project.gradient}
-              delay={(index-1) * 50}
-              isInView={isInView}
+              className={`project-card group ${
+                isInView ? 'project-card-animated' : 'project-card-hidden'
+              }`}
+              style={{ transitionDelay: `${(index - 1) * 50}ms` }}
             >
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-sky-400 group-hover:to-blue-600 transition-all duration-300">
+              <div className={`project-card-gradient ${project.gradient}`}></div>
+              <div className="project-card-content">
+                <h3 className="project-card-title">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                <p className="project-card-description">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="project-tech-container">
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full border border-gray-200 dark:border-gray-700"
+                      className="project-tech-tag"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex gap-4">
+                <div className="project-links-container">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-sky-400 transition-colors"
+                    className="project-link"
                   >
-                    <Github className="w-5 h-5" />
-                    <span className="text-sm font-medium">Code</span>
+                    <Github className="project-link-icon" />
+                    <span className="project-link-text">Code</span>
                   </a>
 
                   {project.live && (
@@ -63,21 +65,21 @@ export function Projects() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-sky-400 transition-colors"
+                      className="project-link"
                     >
-                      <ExternalLink className="w-5 h-5" />
-                      <span className="text-sm font-medium">Live Demo</span>
+                      <ExternalLink className="project-link-icon" />
+                      <span className="project-link-text">Live Demo</span>
                     </a>
                   )}
                 </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
 
         {/* View All Button */}
-        <div className={`text-center mt-12 transition-all duration-700 delay-500 ${
-          isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        <div className={`projects-view-all-container ${
+          isInView ? 'projects-view-all-animated' : 'projects-view-all-hidden'
         }`}>
           <Button
             as={Link}
@@ -86,7 +88,7 @@ export function Projects() {
             size="lg"
             icon={ArrowRight}
             iconPosition="right"
-            className="px-8 py-4 shadow-lg hover:shadow-xl"
+            className="projects-view-all-button"
           >
             View All Projects
           </Button>

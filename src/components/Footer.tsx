@@ -1,4 +1,4 @@
-import { socialLinks } from '../data';
+import { socialLinksData } from '../data';
 import { SocialLinks } from './ui';
 
 export function Footer() {
@@ -13,7 +13,7 @@ export function Footer() {
             Connect with me
           </h3>
           <SocialLinks
-            links={socialLinks}
+            links={socialLinksData}
             size="md"
             className="justify-center space-x-6"
           />

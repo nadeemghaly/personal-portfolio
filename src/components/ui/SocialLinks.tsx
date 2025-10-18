@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 interface SocialLink {
   name: string;
@@ -12,7 +12,6 @@ interface SocialLinksProps {
     github?: string;
     linkedin?: string;
     email?: string;
-    twitter?: string;
   };
   size?: 'sm' | 'md' | 'lg';
   className?: string;
@@ -38,12 +37,6 @@ export function SocialLinks({ links, size = 'md', className = '' }: SocialLinksP
       icon: Mail,
       color: 'bg-gradient-to-r from-sky-400 to-blue-600 text-white'
     },
-    {
-      name: 'Twitter',
-      url: links.twitter || '',
-      icon: Twitter,
-      color: 'bg-sky-500 text-white'
-    }
   ].filter(link => link.url);
 
   const sizeClasses = {

@@ -1,6 +1,6 @@
-import { socialLinks } from './socialLinks';
+import { socialLinksData } from './socialLinks';
 
-export interface ContactInfo {
+export interface ContactInfoData {
   email: string;
   phone: string;
   location: string;
@@ -9,7 +9,7 @@ export interface ContactInfo {
 export interface ContactData {
   title: string;
   description: string;
-  contactInfo: ContactInfo;
+  contactInfo: ContactInfoData;
   message: string;
 }
 
@@ -17,7 +17,7 @@ export const contactData: ContactData = {
   title: "Get In Touch",
   description: "Have a project in mind or want to collaborate? I'd love to hear from you!",
   contactInfo: {
-    email: socialLinks.email,
+    email: socialLinksData.email,
     phone: "+201111692388",
     location: "Cairo, Egypt"
   },

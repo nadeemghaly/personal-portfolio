@@ -2,6 +2,7 @@ import { Code2, Lightbulb, Users } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 import { SectionWrapper } from './ui';
 import { aboutData } from '../data';
+import '../styles/components/about.css';
 
 const iconMap = {
   Code2,
@@ -17,23 +18,23 @@ export function About() {
       id="about"
       className="bg-white dark:bg-gray-900 transition-colors duration-300"
       >
-    <section id="about" className="py-20 px-6 bg-white dark:bg-gray-900 transition-colors duration-300">
-      <div ref={ref} className="max-w-6xl mx-auto">
-        <h2 className={`text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center transition-all duration-700 ${
+    <section id="about" className="about-section">
+      <div ref={ref} className="about-container">
+        <h2 className={`about-title transition-all duration-700 ${
           isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           {aboutData.title}
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+        <div className="about-content">
+          <div className="about-text-container">
             {aboutData.paragraphs.map((paragraph, index) => (
               <p 
                 key={index}
-                className={`text-lg text-gray-700 dark:text-gray-300 leading-relaxed transition-all duration-700 ${
+                className={`about-paragraph ${
                   index === 0 ? 'delay-150' : 'delay-300'
                 } ${
-                  isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+                  isInView ? 'about-paragraph-animated' : 'about-paragraph-hidden'
                 }`}
               >
                 {paragraph}
@@ -41,22 +42,22 @@ export function About() {
             ))}
           </div>
 
-          <div className="grid gap-6">
+          <div className="about-features-container">
             {aboutData.features.map((feature, index) => {
               const IconComponent = iconMap[feature.icon as keyof typeof iconMap];
               
               return (
                 <div 
                   key={index}
-                  className={`p-6 rounded-xl bg-gradient-to-br from-sky-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 border border-sky-100 dark:border-gray-600 hover:shadow-lg transition-all duration-700 delay-${index * 150} ${
-                    isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+                  className={`about-feature-card delay-${index * 150} ${
+                    isInView ? 'about-feature-card-animated' : 'about-feature-card-hidden'
                   }`}
                 >
-                  <IconComponent className="w-8 h-8 text-blue-600 dark:text-sky-400 mb-3" />
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  <IconComponent className="about-feature-icon" />
+                  <h3 className="about-feature-title">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
+                  <p className="about-feature-description">
                     {feature.description}
                   </p>
                 </div>

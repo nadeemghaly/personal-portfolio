@@ -1,4 +1,4 @@
-export interface Project {
+export interface ProjectData {
   title: string;
   description: string;
   tech: string[];
@@ -7,7 +7,7 @@ export interface Project {
   gradient: string;
 }
 
-export const projects: Project[] = [
+export const projectsData: ProjectData[] = [
   {
     title: 'E-Commerce Platform',
     description: 'A full-featured e-commerce platform with payment integration, product management, and real-time inventory tracking.',

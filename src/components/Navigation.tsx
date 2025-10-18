@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
+import { useNavigate } from 'react-router-dom';
 
 const navLinks = [
   { label: 'About', href: '#about' },
@@ -10,6 +11,7 @@ const navLinks = [
 ];
 
 export function Navigation() {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -54,7 +56,8 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => navigate('/')}
+
             className="text-2xl font-bold bg-gradient-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text hover:scale-105 transition-transform"
           >
             Portfolio

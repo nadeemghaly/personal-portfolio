@@ -23,7 +23,7 @@ export function SectionWrapper({
   const { ref, isInView } = useInView();
 
   return (
-    <section id={id} className={`min-h-screen ${className}`}>
+    <section id={id} className={`min-h-screen   ${className}`}>
       <div ref={ref} className="max-w-6xl mx-auto">
         {title && (
           <h2 className={`${titleClassName} transition-all duration-700 ${

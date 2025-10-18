@@ -1,22 +1,17 @@
 import { ExternalLink, Github, ArrowLeft } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import { projects } from '../data';
+import { projectsData } from '../data';
+import { SectionWrapper } from '../components/ui';
 
 export function ProjectsPage() {
-  const navigate = useNavigate();
 
   return (
+    <SectionWrapper
+      id="projects"
+    > 
     <div className="min-h-screen bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
       {/* Header */}
       <div className="bg-white dark:bg-gray-900 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-8">
-          <button
-            onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors mb-6"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            Back
-          </button>
+        <div className="max-w-7xl mx-auto px-6">
           
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             All Projects
@@ -30,7 +25,7 @@ export function ProjectsPage() {
       {/* Projects Grid */}
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projectsData.map((project, index) => (
             <div
               key={index}
               className="group bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
@@ -86,5 +81,6 @@ export function ProjectsPage() {
         </div>
       </div>
     </div>
+    </SectionWrapper>
   );
 }

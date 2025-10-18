@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import { heroData, socialLinks } from '../data';
+import { heroData, socialLinksData } from '../data';
 import { SectionWrapper, SocialLinks } from './ui';
 
 export function Hero() {
@@ -31,7 +31,7 @@ export function Hero() {
         </p>
 
         <SocialLinks
-          links={socialLinks}
+          links={socialLinksData}
           size="md"
           className="mb-12"
         />

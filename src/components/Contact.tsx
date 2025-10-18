@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useInView } from '../hooks/useInView';
 import { contactData } from '../data';
-import { SectionWrapper, ContactInfo, Form, Card } from './ui';
+import { SectionWrapper, ContactInfo, Form } from './ui';
+import '../styles/components/contact.css';
 
 export function Contact() {
   const { ref, isInView } = useInView();
@@ -52,14 +53,14 @@ export function Contact() {
   return (
     <SectionWrapper
       id="contact"
-      className="py-20 px-6 bg-gradient-to-br from-sky-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300"
+      className="contact-section"
       title={contactData.title}
       description={contactData.description}
     >
-      <div className="max-w-5xl mx-auto">
-        <div ref={ref} className="grid md:grid-cols-2 gap-12 items-start">
-          <div className={`space-y-6 transition-all duration-700 delay-200 ${
-            isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+      <div className="contact-container">
+        <div ref={ref} className="contact-content">
+          <div className={`contact-info-container ${
+            isInView ? 'contact-info-animated' : 'contact-info-hidden'
           }`}>
             <ContactInfo
               email={contactData.contactInfo.email}
@@ -67,15 +68,15 @@ export function Contact() {
               location={contactData.contactInfo.location}
             />
 
-            <Card className="mt-8 p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            <div className="contact-message-card">
+              <p className="contact-message-text">
                 {contactData.message}
               </p>
-            </Card>
+            </div>
           </div>
 
-          <div className={`transition-all duration-700 delay-300 ${
-            isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+          <div className={`contact-form-container ${
+            isInView ? 'contact-form-animated' : 'contact-form-hidden'
           }`}>
             <Form
               fields={formFields}

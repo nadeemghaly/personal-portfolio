@@ -165,10 +165,6 @@
   @apply bg-gradient-to-r from-sky-400 to-blue-600 text-white;
 }
 
-.social-twitter {
-  @apply bg-sky-500 text-white;
-}
-
 /* Contact Info */
 .contact-info {
   @apply space-y-6;

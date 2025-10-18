@@ -1,6 +1,6 @@
 /* Contact Section Styles */
 .contact-section {
-  @apply py-20 px-6 bg-gradient-to-br from-sky-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300;
+  @apply min-h-screen flex items-center justify-center;
 }
 
 .contact-container {
