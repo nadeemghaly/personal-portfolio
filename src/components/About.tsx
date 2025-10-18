@@ -18,7 +18,7 @@ export function About() {
       id="about"
       className="bg-white dark:bg-gray-900 transition-colors duration-300"
       >
-    <section id="about" className="about-section">
+
       <div ref={ref} className="about-container">
         <h2 className={`about-title transition-all duration-700 ${
           isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -66,7 +66,6 @@ export function About() {
           </div>
         </div>
       </div>
-    </section>
     </SectionWrapper>
   );
 }

@@ -57,10 +57,9 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           <button
             onClick={() => navigate('/')}
-
             className="text-2xl font-bold bg-gradient-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text hover:scale-105 transition-transform"
           >
-            Portfolio
+            Home
           </button>
 
           <div className="hidden md:flex items-center gap-8">
