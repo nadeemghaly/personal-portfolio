@@ -1,0 +1,31 @@
+/* Hero Section Styles */
+@layer components {
+
+  .hero-container {
+    @apply max-w-4xl mx-auto text-center animate-fade-in;
+  }
+
+  .hero-name {
+    @apply text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight transition-colors duration-300;
+  }
+
+  .hero-name-gradient {
+    @apply bg-gradient-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text transition-all duration-300;
+  }
+
+  .hero-title {
+    @apply text-2xl md:text-3xl text-gray-700 dark:text-gray-300 font-medium transition-colors duration-300;
+  }
+
+  .hero-description {
+    @apply text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed transition-colors duration-300;
+  }
+
+  .hero-scroll-button {
+    @apply animate-bounce text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors;
+  }
+
+  .hero-scroll-icon {
+    @apply w-8 h-8;
+  }
+}

@@ -1,0 +1,224 @@
+/* UI Components Styles */
+
+/* Section Wrapper */
+.section-wrapper {
+  @apply py-32 px-6 bg-white dark:bg-gray-900 transition-colors duration-300;
+}
+
+.section-wrapper-container {
+  @apply max-w-6xl mx-auto;
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 text-center transition-all duration-700;
+}
+
+.section-title-animated {
+  @apply opacity-100 translate-y-0;
+}
+
+.section-title-hidden {
+  @apply opacity-0 translate-y-10;
+}
+
+.section-description {
+  @apply text-lg text-gray-600 dark:text-gray-400 mb-12 text-center max-w-2xl mx-auto transition-all duration-700 delay-150;
+}
+
+.section-description-animated {
+  @apply opacity-100 translate-y-0;
+}
+
+.section-description-hidden {
+  @apply opacity-0 translate-y-10;
+}
+
+/* Card Component */
+.card {
+  @apply bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-700 transition-all duration-700;
+}
+
+.card-hover {
+  @apply hover:shadow-xl;
+}
+
+.card-animated {
+  @apply opacity-100 translate-y-0;
+}
+
+.card-hidden {
+  @apply opacity-0 translate-y-10;
+}
+
+.card-gradient {
+  @apply h-2 bg-gradient-to-r;
+}
+
+/* Feature Card */
+.feature-card {
+  @apply p-6 rounded-xl bg-gradient-to-br from-sky-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 border border-sky-100 dark:border-gray-600 hover:shadow-lg transition-all duration-700;
+}
+
+.feature-card-animated {
+  @apply opacity-100 translate-x-0;
+}
+
+.feature-card-hidden {
+  @apply opacity-0 translate-x-10;
+}
+
+.feature-card-icon {
+  @apply w-8 h-8 text-blue-600 dark:text-sky-400 mb-3;
+}
+
+.feature-card-title {
+  @apply text-xl font-semibold text-gray-900 dark:text-white mb-2;
+}
+
+.feature-card-description {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+/* Button Component */
+.button {
+  @apply inline-flex items-center justify-center gap-2 font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.button-primary {
+  @apply bg-gradient-to-r from-sky-400 to-blue-600 text-white hover:from-sky-500 hover:to-blue-700 hover:shadow-lg hover:scale-[1.02] focus:ring-blue-500;
+}
+
+.button-secondary {
+  @apply bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 focus:ring-gray-500;
+}
+
+.button-outline {
+  @apply border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 focus:ring-gray-500;
+}
+
+.button-ghost {
+  @apply text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:ring-gray-500;
+}
+
+.button-sm {
+  @apply px-3 py-2 text-sm;
+}
+
+.button-md {
+  @apply px-4 py-2 text-base;
+}
+
+.button-lg {
+  @apply px-6 py-3 text-lg;
+}
+
+.button-full-width {
+  @apply w-full;
+}
+
+.button-icon {
+  @apply w-5 h-5;
+}
+
+/* Social Links */
+.social-links {
+  @apply flex items-center justify-center gap-4;
+}
+
+.social-link {
+  @apply rounded-full hover:scale-110 transition-transform duration-200;
+}
+
+.social-link-sm {
+  @apply p-2;
+}
+
+.social-link-md {
+  @apply p-3;
+}
+
+.social-link-lg {
+  @apply p-4;
+}
+
+.social-icon-sm {
+  @apply w-4 h-4;
+}
+
+.social-icon-md {
+  @apply w-6 h-6;
+}
+
+.social-icon-lg {
+  @apply w-8 h-8;
+}
+
+.social-github {
+  @apply bg-gray-900 dark:bg-white text-white dark:text-gray-900;
+}
+
+.social-linkedin {
+  @apply bg-blue-600 text-white;
+}
+
+.social-email {
+  @apply bg-gradient-to-r from-sky-400 to-blue-600 text-white;
+}
+
+.social-twitter {
+  @apply bg-sky-500 text-white;
+}
+
+/* Contact Info */
+.contact-info {
+  @apply space-y-6;
+}
+
+.contact-info-item {
+  @apply flex items-start gap-4;
+}
+
+.contact-info-icon-container {
+  @apply p-3 bg-gradient-to-r from-sky-400 to-blue-600 rounded-lg;
+}
+
+.contact-info-icon {
+  @apply w-6 h-6 text-white;
+}
+
+.contact-info-content {
+  @apply flex-1;
+}
+
+.contact-info-title {
+  @apply text-xl font-semibold text-gray-900 dark:text-white mb-1;
+}
+
+.contact-info-link {
+  @apply text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-sky-400 transition-colors;
+}
+
+.contact-info-text {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+/* Form */
+.form {
+  @apply space-y-6;
+}
+
+.form-field {
+  @apply space-y-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2;
+}
+
+.form-input {
+  @apply w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-gray-900 dark:text-white;
+}
+
+.form-textarea {
+  @apply w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none text-gray-900 dark:text-white;
+}

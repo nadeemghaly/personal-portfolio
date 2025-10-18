@@ -1,0 +1,42 @@
+/* Home Page Styles */
+.home-page {
+  @apply snap-y snap-mandatory h-screen overflow-y-scroll;
+}
+
+.home-section {
+  @apply snap-start;
+}
+
+.home-section-full-height {
+  @apply min-h-screen;
+}
+
+/* Hero Section on Home Page */
+.home-hero {
+  @apply snap-start min-h-screen;
+}
+
+/* About Section on Home Page */
+.home-about {
+  @apply snap-start min-h-screen;
+}
+
+/* Projects Section on Home Page */
+.home-projects {
+  @apply snap-start min-h-screen;
+}
+
+/* Skills Section on Home Page */
+.home-skills {
+  @apply snap-start;
+}
+
+/* Contact Section on Home Page */
+.home-contact {
+  @apply snap-start;
+}
+
+/* Footer Section on Home Page */
+.home-footer {
+  @apply snap-start min-h-screen;
+}

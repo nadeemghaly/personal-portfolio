@@ -1,0 +1,45 @@
+/* Main CSS File - Imports all organized styles */
+
+/* Tailwind Base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Layout Styles */
+@import './layout/base.css';
+@import './layout/animations.css';
+
+/* Component Styles */
+@import './components/hero.css';
+@import './components/about.css';
+@import './components/skills.css';
+@import './components/projects.css';
+@import './components/contact.css';
+@import './components/footer.css';
+@import './components/navigation.css';
+@import './components/ui.css';
+
+/* Page Styles */
+@import './pages/home.css';
+@import './pages/projects.css';
+
+/* Utility Styles */
+@import './utilities/common.css';
+
+/* Custom Utilities */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

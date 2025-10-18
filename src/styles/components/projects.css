@@ -1,0 +1,84 @@
+/* Projects Section Styles */
+.projects-section {
+  @apply py-32 px-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300;
+}
+
+.projects-container {
+  @apply max-w-7xl mx-auto;
+}
+
+.projects-title {
+  @apply text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 text-center;
+}
+
+.projects-description {
+  @apply text-lg text-gray-600 dark:text-gray-400 mb-12 text-center max-w-2xl mx-auto;
+}
+
+.projects-grid {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.project-card {
+  @apply group bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl border border-gray-200 dark:border-gray-700 transition-all duration-700;
+}
+
+.project-card-animated {
+  @apply opacity-100 translate-y-0;
+}
+
+.project-card-hidden {
+  @apply opacity-0 translate-y-10;
+}
+
+.project-card-gradient {
+  @apply h-2 bg-gradient-to-r;
+}
+
+.project-card-content {
+  @apply p-6;
+}
+
+.project-card-title {
+  @apply text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-sky-400 group-hover:to-blue-600 transition-all duration-300;
+}
+
+.project-card-description {
+  @apply text-gray-600 dark:text-gray-400 mb-4 leading-relaxed;
+}
+
+.project-tech-container {
+  @apply flex flex-wrap gap-2 mb-6;
+}
+
+.project-tech-tag {
+  @apply px-3 py-1 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full border border-gray-200 dark:border-gray-700;
+}
+
+.project-links-container {
+  @apply flex gap-4;
+}
+
+.project-link {
+  @apply flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-sky-400 transition-colors;
+}
+
+.project-link-icon {
+  @apply w-5 h-5;
+}
+
+.project-link-text {
+  @apply text-sm font-medium;
+}
+
+.projects-view-all-container {
+  @apply text-center mt-12 transition-all duration-700 delay-500;
+}
+
+.projects-view-all-animated {
+  @apply opacity-100 translate-y-0;
+}
+
+.projects-view-all-hidden {
+  @apply opacity-0 translate-y-10;
+}

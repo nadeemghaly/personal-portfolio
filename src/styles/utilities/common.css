@@ -1,0 +1,119 @@
+/* Common Utility Classes */
+
+/* Gradients */
+.gradient-sky-blue {
+  @apply bg-gradient-to-r from-sky-400 to-blue-600;
+}
+
+.gradient-text-sky-blue {
+  @apply bg-gradient-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text;
+}
+
+.gradient-bg-sky-50 {
+  @apply bg-gradient-to-br from-sky-50 to-blue-50 dark:from-gray-800 dark:to-gray-700;
+}
+
+/* Shadows */
+.shadow-soft {
+  @apply shadow-md hover:shadow-xl;
+}
+
+.shadow-card {
+  @apply shadow-md hover:shadow-lg;
+}
+
+/* Transitions */
+.transition-smooth {
+  @apply transition-all duration-300;
+}
+
+.transition-slow {
+  @apply transition-all duration-700;
+}
+
+/* Hover Effects */
+.hover-scale {
+  @apply hover:scale-105 transition-transform duration-200;
+}
+
+.hover-lift {
+  @apply hover:shadow-lg hover:scale-[1.02] transition-all duration-200;
+}
+
+/* Text Styles */
+.text-gradient {
+  @apply bg-gradient-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text;
+}
+
+.text-muted {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+.text-primary {
+  @apply text-gray-900 dark:text-white;
+}
+
+/* Spacing */
+.section-padding {
+  @apply py-32 px-6;
+}
+
+.section-padding-sm {
+  @apply py-20 px-6;
+}
+
+.container-max {
+  @apply max-w-6xl mx-auto;
+}
+
+.container-max-lg {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Flexbox Utilities */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.flex-start {
+  @apply flex items-start;
+}
+
+/* Grid Utilities */
+.grid-responsive {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.grid-responsive-2 {
+  @apply grid md:grid-cols-2 gap-8;
+}
+
+.grid-responsive-3 {
+  @apply grid md:grid-cols-3 gap-8;
+}
+
+/* Border Utilities */
+.border-soft {
+  @apply border border-gray-200 dark:border-gray-700;
+}
+
+.border-gradient {
+  @apply border border-sky-100 dark:border-gray-600;
+}
+
+/* Background Utilities */
+.bg-card {
+  @apply bg-white dark:bg-gray-900;
+}
+
+.bg-muted {
+  @apply bg-gray-50 dark:bg-gray-800;
+}
+
+.bg-gradient-muted {
+  @apply bg-gradient-to-br from-sky-50 to-blue-50 dark:from-gray-900 dark:to-gray-800;
+}

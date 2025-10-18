@@ -1,0 +1,43 @@
+/* Base Layout Styles */
+.app-container {
+  @apply min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300;
+}
+
+/* Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Scroll Snap */
+.scroll-snap-container {
+  @apply snap-y snap-mandatory h-screen overflow-y-scroll;
+}
+
+.scroll-snap-section {
+  @apply snap-start;
+}
+
+.scroll-snap-section-full {
+  @apply snap-start min-h-screen;
+}

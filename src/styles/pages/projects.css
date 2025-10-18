@@ -1,0 +1,80 @@
+/* Projects Page Styles */
+.projects-page {
+  @apply min-h-screen bg-gray-50 dark:bg-gray-800 transition-colors duration-300;
+}
+
+.projects-page-header {
+  @apply bg-white dark:bg-gray-900 shadow-sm;
+}
+
+.projects-page-header-container {
+  @apply max-w-7xl mx-auto px-6 py-8;
+}
+
+.projects-page-back-button {
+  @apply inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors mb-6;
+}
+
+.projects-page-back-icon {
+  @apply w-5 h-5;
+}
+
+.projects-page-title {
+  @apply text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4;
+}
+
+.projects-page-description {
+  @apply text-lg text-gray-600 dark:text-gray-400 max-w-2xl;
+}
+
+.projects-page-content {
+  @apply max-w-7xl mx-auto px-6 py-12;
+}
+
+.projects-page-grid {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.projects-page-card {
+  @apply group bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700;
+}
+
+.projects-page-card-gradient {
+  @apply h-2 bg-gradient-to-r;
+}
+
+.projects-page-card-content {
+  @apply p-6;
+}
+
+.projects-page-card-title {
+  @apply text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-sky-400 group-hover:to-blue-600 transition-all duration-300;
+}
+
+.projects-page-card-description {
+  @apply text-gray-600 dark:text-gray-400 mb-4 leading-relaxed;
+}
+
+.projects-page-tech-container {
+  @apply flex flex-wrap gap-2 mb-6;
+}
+
+.projects-page-tech-tag {
+  @apply px-3 py-1 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full border border-gray-200 dark:border-gray-700;
+}
+
+.projects-page-links-container {
+  @apply flex gap-4;
+}
+
+.projects-page-link {
+  @apply flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-sky-400 transition-colors;
+}
+
+.projects-page-link-icon {
+  @apply w-5 h-5;
+}
+
+.projects-page-link-text {
+  @apply text-sm font-medium;
+}

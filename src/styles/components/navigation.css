@@ -1,0 +1,104 @@
+/* Navigation Styles */
+.navigation {
+  @apply fixed top-0 left-0 right-0 z-50 transition-all duration-300;
+}
+
+.navigation-scrolled {
+  @apply bg-white/95 dark:bg-gray-900/95 backdrop-blur-md;
+}
+
+.navigation-transparent {
+  @apply bg-transparent;
+}
+
+.navigation-container {
+  @apply max-w-7xl mx-auto px-6 py-4;
+}
+
+.navigation-content {
+  @apply flex items-center justify-between;
+}
+
+.navigation-logo {
+  @apply text-2xl font-bold bg-gradient-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text hover:scale-105 transition-transform;
+}
+
+.navigation-desktop-menu {
+  @apply hidden md:flex items-center gap-8;
+}
+
+.navigation-link {
+  @apply text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-sky-400 font-medium transition-colors;
+}
+
+.navigation-mobile-menu {
+  @apply md:hidden flex items-center gap-4;
+}
+
+.navigation-mobile-toggle {
+  @apply p-2 text-gray-700 dark:text-gray-300;
+}
+
+.navigation-mobile-icon {
+  @apply w-6 h-6;
+}
+
+.navigation-mobile-overlay {
+  @apply md:hidden fixed inset-0 z-50;
+}
+
+.navigation-mobile-backdrop {
+  @apply absolute inset-0 bg-black/50 backdrop-blur-sm;
+}
+
+.navigation-mobile-sidebar {
+  @apply absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white dark:bg-gray-900 shadow-2xl transform transition-transform duration-300 ease-in-out;
+}
+
+.navigation-mobile-sidebar-open {
+  @apply translate-x-0;
+}
+
+.navigation-mobile-sidebar-closed {
+  @apply translate-x-full;
+}
+
+.navigation-mobile-content {
+  @apply flex flex-col h-full;
+}
+
+.navigation-mobile-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700;
+}
+
+.navigation-mobile-title {
+  @apply text-xl font-semibold text-gray-900 dark:text-white;
+}
+
+.navigation-mobile-close {
+  @apply p-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors;
+}
+
+.navigation-mobile-close-icon {
+  @apply w-6 h-6;
+}
+
+.navigation-mobile-menu-container {
+  @apply flex-1 py-6;
+}
+
+.navigation-mobile-menu {
+  @apply space-y-2;
+}
+
+.navigation-mobile-menu-item {
+  @apply block w-full text-left px-6 py-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-sky-400 hover:bg-gray-50 dark:hover:bg-gray-800 font-medium transition-colors;
+}
+
+.navigation-mobile-footer {
+  @apply p-6 border-t border-gray-200 dark:border-gray-700;
+}
+
+.navigation-mobile-theme-toggle {
+  @apply flex justify-center;
+}

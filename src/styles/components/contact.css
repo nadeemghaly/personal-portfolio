@@ -1,0 +1,104 @@
+/* Contact Section Styles */
+.contact-section {
+  @apply py-20 px-6 bg-gradient-to-br from-sky-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300;
+}
+
+.contact-container {
+  @apply max-w-5xl mx-auto;
+}
+
+.contact-title {
+  @apply text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 text-center;
+}
+
+.contact-description {
+  @apply text-lg text-gray-600 dark:text-gray-400 mb-12 text-center max-w-2xl mx-auto;
+}
+
+.contact-content {
+  @apply grid md:grid-cols-2 gap-12 items-start;
+}
+
+.contact-info-container {
+  @apply space-y-6 transition-all duration-700 delay-200;
+}
+
+.contact-info-animated {
+  @apply opacity-100 translate-x-0;
+}
+
+.contact-info-hidden {
+  @apply opacity-0 -translate-x-10;
+}
+
+.contact-info-item {
+  @apply flex items-start gap-4;
+}
+
+.contact-info-icon-container {
+  @apply p-3 bg-gradient-to-r from-sky-400 to-blue-600 rounded-lg;
+}
+
+.contact-info-icon {
+  @apply w-6 h-6 text-white;
+}
+
+.contact-info-content {
+  @apply flex-1;
+}
+
+.contact-info-title {
+  @apply text-xl font-semibold text-gray-900 dark:text-white mb-1;
+}
+
+.contact-info-link {
+  @apply text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-sky-400 transition-colors;
+}
+
+.contact-info-text {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+.contact-message-card {
+  @apply mt-8 p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700;
+}
+
+.contact-message-text {
+  @apply text-gray-700 dark:text-gray-300 leading-relaxed;
+}
+
+.contact-form-container {
+  @apply transition-all duration-700 delay-300;
+}
+
+.contact-form-animated {
+  @apply opacity-100 translate-x-0;
+}
+
+.contact-form-hidden {
+  @apply opacity-0 translate-x-10;
+}
+
+.contact-form {
+  @apply space-y-6;
+}
+
+.contact-form-field {
+  @apply space-y-2;
+}
+
+.contact-form-label {
+  @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2;
+}
+
+.contact-form-input {
+  @apply w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-gray-900 dark:text-white;
+}
+
+.contact-form-textarea {
+  @apply w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none text-gray-900 dark:text-white;
+}
+
+.contact-form-submit {
+  @apply w-full py-3 px-6 bg-gradient-to-r from-sky-400 to-blue-600 text-white font-medium rounded-lg hover:shadow-lg hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2;
+}
