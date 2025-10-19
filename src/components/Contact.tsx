@@ -69,9 +69,11 @@ export function Contact() {
             />
 
             <div className="contact-message-card">
-              <p className="contact-message-text">
-                {contactData.message}
-              </p>
+                {contactData.messages.map((message, index) => (
+                  <p key={index} className="contact-message-text">
+                    {message}
+                  </p>
+                ))}
             </div>
           </div>
 

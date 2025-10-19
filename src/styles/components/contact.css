@@ -60,7 +60,7 @@
 }
 
 .contact-message-card {
-  @apply mt-8 p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700;
+  @apply mt-8 p-6 space-y-4 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700;
 }
 
 .contact-message-text {

@@ -10,7 +10,7 @@ export interface ContactData {
   title: string;
   description: string;
   contactInfo: ContactInfoData;
-  message: string;
+  messages: string[];
 }
 
 export const contactData: ContactData = {
@@ -21,5 +21,8 @@ export const contactData: ContactData = {
     phone: "+201111692388",
     location: "Cairo, Egypt"
   },
-  message: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out through the form or directly via email."
+  messages: [
+    "I’m always excited to connect, whether it’s about a new project, a creative idea, or a chance to collaborate.",
+    "Feel free to reach out through the form or email me directly, even if it’s just for a quick chat."
+  ]
 };

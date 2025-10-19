@@ -31,9 +31,7 @@ export function About() {
             {aboutData.paragraphs.map((paragraph, index) => (
               <p 
                 key={index}
-                className={`about-paragraph ${
-                  index === 0 ? 'delay-150' : 'delay-300'
-                } ${
+                className={`about-paragraph delay-${index * 150} ${
                   isInView ? 'about-paragraph-animated' : 'about-paragraph-hidden'
                 }`}
               >

@@ -1,4 +1,4 @@
-import { ReactNode, FormEvent } from 'react';
+import { FormEvent } from 'react';
 import { Send } from 'lucide-react';
 import { Button } from './Button';
 
@@ -25,7 +25,7 @@ export function Form({
   onSubmit,
   formData,
   onChange,
-  submitText = 'Send Message',
+  submitText,
   className = ''
 }: FormProps) {
   return (

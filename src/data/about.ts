@@ -11,24 +11,25 @@ export interface AboutData {
 export const aboutData: AboutData = {
   title: "About Me",
   paragraphs: [
-    "I'm a passionate software engineer with a keen eye for detail and a love for crafting elegant solutions. With several years of experience in full-stack development, I've worked on projects ranging from dynamic web applications to complex backend systems.",
-    "I believe in writing clean, maintainable code and staying up-to-date with the latest technologies. When I'm not coding, you'll find me exploring new frameworks, contributing to open-source, or sharing knowledge with the developer community."
+    "I'm a software engineer driven by curiosity and innovation. I love building intelligent, scalable systems that blend clean architecture with creativity. Over the years, I've worked across the full stack — from intuitive frontends to robust, high-performance backends.",
+    "I'm passionate about leveraging AI and automation to amplify productivity and create smarter digital experiences. Outside of coding, I explore emerging tools, contribute to open-source, and share knowledge with the developer community.",
+    "I’m constantly pushing my boundaries — learning, experimenting, and evolving with every project. My goal is to build technology that not only solves problems but also inspires progress and empowers people."
   ],
   features: [
     {
       icon: "Code2",
       title: "Clean Code Advocate",
-      description: "Writing maintainable, scalable, and efficient code is my priority"
+      description: "Committed to writing elegant, maintainable, and scalable solutions that stand the test of time."
     },
     {
       icon: "Lightbulb",
-      title: "Problem Solver",
-      description: "Passionate about tackling complex challenges with innovative solutions"
+      title: "AI & Automation Enthusiast",
+      description: "Committed to writing elegant, maintainable, and scalable solutions that stand the test of time."
     },
     {
       icon: "Users",
-      title: "Team Player",
-      description: "Collaborating effectively to deliver exceptional results"
+      title: "AI & Automation Enthusiast",
+      description: "Thrives in team environments, driving innovation through clear communication and shared vision."
     }
   ]
 };
