@@ -18,6 +18,8 @@ interface FormProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   submitText?: string;
   className?: string;
+  formName?: string;
+  isSubmitting?: boolean;
 }
 
 export function Form({
@@ -26,10 +28,25 @@ export function Form({
   formData,
   onChange,
   submitText,
-  className = ''
+  className = '',
+  formName = 'contact',
+  isSubmitting = false
 }: FormProps) {
   return (
-    <form onSubmit={onSubmit} className={`space-y-6 ${className}`}>
+    <form 
+      name={formName}
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      onSubmit={onSubmit} 
+      className={`space-y-6 ${className}`}
+    >
+      <input type="hidden" name="form-name" value={formName} />
+      <div style={{ display: 'none' }}>
+        <label>
+          Don't fill this out if you're human: <input name="bot-field" />
+        </label>
+      </div>
       {fields.map((field) => (
         <div key={field.name}>
           <label
@@ -71,8 +88,9 @@ export function Form({
         fullWidth
         icon={Send}
         iconPosition="right"
+        disabled={isSubmitting}
       >
-        {submitText}
+        {isSubmitting ? 'Sending...' : submitText}
       </Button>
     </form>
   );

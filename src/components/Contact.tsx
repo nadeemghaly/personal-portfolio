@@ -11,11 +11,36 @@ export function Contact() {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const mailtoLink = `mailto:${contactData.contactInfo.email}?subject=Portfolio Contact from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.email}`;
-    window.location.href = mailtoLink;
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -80,12 +105,30 @@ export function Contact() {
           <div className={`contact-form-container ${
             isInView ? 'contact-form-animated' : 'contact-form-hidden'
           }`}>
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 rounded-lg">
+                <p className="text-green-800 dark:text-green-200 text-center">
+                  ✅ Message sent successfully! I'll get back to you soon.
+                </p>
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-100 dark:bg-red-900 border border-red-300 dark:border-red-700 rounded-lg">
+                <p className="text-red-800 dark:text-red-200 text-center">
+                  ❌ Sorry, there was an error sending your message. Please try again.
+                </p>
+              </div>
+            )}
+
             <Form
               fields={formFields}
               onSubmit={handleSubmit}
               formData={formData}
               onChange={handleChange}
               submitText="Send Message"
+              formName="contact"
+              isSubmitting={isSubmitting}
             />
           </div>
         </div>
