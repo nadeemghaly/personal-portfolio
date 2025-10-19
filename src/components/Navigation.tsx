@@ -4,10 +4,11 @@ import { ThemeToggle } from './ThemeToggle';
 import { useNavigate } from 'react-router-dom';
 
 const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Contact', href: '#contact' }
+  { label: 'About', href: '/about' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Skills', href: '/skills' },
+  { label: 'Experience', href: '/experience' },
+  { label: 'Contact', href: '/contact' }
 ];
 
 export function Navigation() {
@@ -39,9 +40,8 @@ export function Navigation() {
     };
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (href: string) => {
+    navigate(href);
     setIsMobileMenuOpen(false);
   };
 
@@ -66,7 +66,7 @@ export function Navigation() {
             {navLinks.map((link) => (
               <button
                 key={link.href}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => handleNavClick(link.href)}
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-sky-400 font-medium transition-colors"
               >
                 {link.label}
@@ -117,7 +117,7 @@ export function Navigation() {
                     {navLinks.map((link) => (
                       <button
                         key={link.href}
-                        onClick={() => scrollToSection(link.href)}
+                        onClick={() => handleNavClick(link.href)}
                         className="block w-full text-left px-6 py-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-sky-400 hover:bg-gray-50 dark:hover:bg-gray-800 font-medium transition-colors"
                       >
                         {link.label}

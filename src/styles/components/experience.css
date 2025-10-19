@@ -1,0 +1,115 @@
+/* Experience Section Styles */
+.experience-section {
+  @apply py-32 px-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300;
+}
+
+.experience-container {
+  @apply max-w-4xl mx-auto;
+}
+
+.experience-timeline {
+  @apply relative;
+}
+
+.experience-timeline::before {
+  content: '';
+  @apply absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-sky-400 to-blue-600;
+}
+
+.experience-item {
+  @apply relative mb-12 pl-20 transition-all duration-700;
+}
+
+.experience-item-animated {
+  @apply opacity-100 translate-x-0;
+}
+
+.experience-item-hidden {
+  @apply opacity-0 translate-x-10;
+}
+
+.experience-item::before {
+  content: '';
+  @apply absolute left-6 top-6 w-4 h-4 bg-gradient-to-r from-sky-400 to-blue-600 rounded-full border-4 border-white dark:border-gray-800;
+}
+
+.experience-content {
+  @apply bg-white dark:bg-gray-900 rounded-xl p-8 shadow-md hover:shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300;
+}
+
+.experience-header {
+  @apply mb-4;
+}
+
+.experience-title {
+  @apply text-2xl font-bold text-gray-900 dark:text-white mb-2;
+}
+
+.experience-company {
+  @apply text-lg text-blue-600 dark:text-sky-400 font-semibold;
+}
+
+.experience-meta {
+  @apply flex flex-wrap gap-4 mb-6 text-sm text-gray-600 dark:text-gray-400;
+}
+
+.experience-period,
+.experience-location {
+  @apply flex items-center gap-2;
+}
+
+.experience-icon {
+  @apply w-4 h-4;
+}
+
+.experience-description {
+  @apply text-gray-700 dark:text-gray-300 mb-6 leading-relaxed;
+}
+
+.experience-technologies {
+  @apply flex flex-wrap gap-2 mb-6;
+}
+
+.experience-tech-tag {
+  @apply px-3 py-1 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full border border-gray-200 dark:border-gray-700;
+}
+
+.experience-achievements {
+  @apply border-t border-gray-200 dark:border-gray-700 pt-6;
+}
+
+.experience-achievements-title {
+  @apply text-lg font-semibold text-gray-900 dark:text-white mb-3;
+}
+
+.experience-achievements-list {
+  @apply space-y-2;
+}
+
+.experience-achievement-item {
+  @apply text-gray-700 dark:text-gray-300 leading-relaxed relative pl-6;
+}
+
+.experience-achievement-item::before {
+  content: '•';
+  @apply absolute left-0 text-blue-600 dark:text-sky-400 font-bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-timeline::before {
+    @apply left-4;
+  }
+  
+  .experience-item {
+    @apply pl-16;
+  }
+  
+  .experience-item::before {
+    @apply left-2;
+  }
+  
+  .experience-content {
+    @apply p-6;
+  }
+}
