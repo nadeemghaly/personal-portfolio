@@ -1,7 +1,7 @@
-import { Code2, Lightbulb, Users } from 'lucide-react';
+import { Code2, Lightbulb, Users, Download, FileText } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
-import { SectionWrapper } from './ui';
-import { aboutData } from '../data';
+import { SectionWrapper, Button } from './ui';
+import { aboutData, resumeData } from '../data';
 import '../styles/components/about.css';
 
 const iconMap = {
@@ -61,6 +61,44 @@ export function About() {
                 </div>
               );
             })}
+          </div>
+        </div>
+
+        {/* Resume Download Section */}
+        <div className={`about-resume-section ${
+          isInView ? 'about-resume-animated' : 'about-resume-hidden'
+        }`}>
+          <div className="about-resume-card">
+            <div className="about-resume-icon">
+              <FileText className="w-8 h-8" />
+            </div>
+            <div className="about-resume-content">
+              <h3 className="about-resume-title">Download My Resume</h3>
+              <p className="about-resume-description">
+                Get a detailed overview of my experience, skills, and achievements in PDF format.
+              </p>
+              <div className="about-resume-meta">
+                <span className="about-resume-updated">
+                  Last updated: {resumeData.lastUpdated}
+                </span>
+              </div>
+              
+              <Button
+                variant="primary"
+                size="lg"
+                icon={Download}
+                iconPosition="left"
+                className="about-resume-button"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = resumeData.downloadUrl;
+                  link.download = resumeData.fileName;
+                  link.click();
+                }}
+              >
+                Download Resume
+              </Button>
+            </div>
           </div>
         </div>
       </div>
